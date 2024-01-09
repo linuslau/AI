@@ -1,0 +1,430 @@
+Microsoft Windows [Version 10.0.22621.2861]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp>mkdir build
+
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp>cd build
+
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build>cmake ..
+-- Building for: Visual Studio 17 2022
+-- The C compiler identification is MSVC 19.35.32216.1
+-- The CXX compiler identification is MSVC 19.35.32216.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.35.32215/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.35.32215/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.39.0.windows.1")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE
+-- CMAKE_SYSTEM_PROCESSOR: AMD64
+-- CMAKE_GENERATOR_PLATFORM:
+-- x86 detected
+-- Performing Test HAS_AVX_1
+-- Performing Test HAS_AVX_1 - Success
+-- Performing Test HAS_AVX2_1
+-- Performing Test HAS_AVX2_1 - Success
+-- Performing Test HAS_FMA_1
+-- Performing Test HAS_FMA_1 - Success
+-- Performing Test HAS_AVX512_1
+-- Performing Test HAS_AVX512_1 - Success
+-- Configuring done (10.2s)
+-- Generating done (1.2s)
+-- Build files have been written to: C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/build
+
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build>cmake --build . --config Release
+MSBuild version 17.5.1+f6fdcf537 for .NET Framework
+
+  1>Checking Build System
+  Generating build details from Git
+  -- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.39.0.windows.1")
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/common/CMakeLists.txt
+  build-info.cpp
+  build_info.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\common\build_info.dir\Release\build_info.lib
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/CMakeLists.txt
+  ggml.c
+  ggml-alloc.c
+  ggml-backend.c
+  ggml-quants.c
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\ggml-quants.c(643,26): warning C4244: '=': conversion from 'float' to 'int8_t', possible l
+oss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\ggml.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\ggml-quants.c(861,36): warning C4244: '=': conversion from 'float' to 'int8_t', possible l
+oss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\ggml.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\ggml-quants.c(862,36): warning C4244: '=': conversion from 'float' to 'int8_t', possible l
+oss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\ggml.vcxproj]
+  Generating Code...
+  ggml.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\ggml.dir\Release\ggml.lib
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/CMakeLists.txt
+  llama.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\llama.cpp(2971,69): warning C4566: character represented by universal-character-name '\u01
+0A' cannot be represented in the current code page (936) [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\llama.vcxproj]
+  llama.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\Release\llama.lib
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/llava/CMakeLists.txt
+  llava.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\llava.cpp(32,24): warning C4244: 'initializing': conversion from 'double' t
+o 'float', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+  clip.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(271,32): warning C4267: 'initializing': conversion from 'size_t' t
+o 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(627,45): warning C4267: 'initializing': conversion from 'size_t' t
+o 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(481,9): warning C4297: 'clip_model_load': function assumed not to
+throw an exception but does [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(481,9): message : __declspec(nothrow), throw(), noexcept(true), or
+ noexcept was specified on the function [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(760,78): warning C4267: 'argument': conversion from 'size_t' to 'i
+nt', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(860,44): warning C4244: 'initializing': conversion from 'const _Ty
+' to 'uint8_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+          with
+          [
+              _Ty=float
+          ]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(860,34): warning C4244: 'initializing': conversion from 'const _Ty
+' to 'const uint8_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+          with
+          [
+              _Ty=float
+          ]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(898,32): warning C4267: 'initializing': conversion from 'size_t' t
+o 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1043,88): warning C4244: 'argument': conversion from 'int64_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1043,106): warning C4267: 'argument': conversion from 'size_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1046,88): warning C4244: 'argument': conversion from 'int64_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1046,106): warning C4267: 'argument': conversion from 'size_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1049,88): warning C4244: 'argument': conversion from 'int64_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1049,106): warning C4267: 'argument': conversion from 'size_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1052,88): warning C4244: 'argument': conversion from 'int64_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1052,106): warning C4267: 'argument': conversion from 'size_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1055,88): warning C4244: 'argument': conversion from 'int64_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1055,106): warning C4267: 'argument': conversion from 'size_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\clip.cpp(1117,42): warning C4244: 'return': conversion from 'int64_t' to 'i
+nt', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.vcxproj]
+  Generating Code...
+  llava.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava.dir\Release\llava.lib
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/common/CMakeLists.txt
+  common.cpp
+  sampling.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\common\sampling.cpp(75,47): warning C4267: 'initializing': conversion from 'size_t' to 'in
+t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\common\common.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\common\sampling.cpp(75,47): warning C4267: 'initializing': conversion from 'size_t' to 'co
+nst int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\common\common.vcxproj]
+  console.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\common\console.cpp(253,38): warning C4267: 'initializing': conversion from 'size_t' to 'DW
+ORD', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\common\common.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\common\console.cpp(407,43): warning C4267: 'initializing': conversion from 'size_t' to 'in
+t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\common\common.vcxproj]
+  grammar-parser.cpp
+  train.cpp
+  Generating Code...
+  common.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\common\Release\common.lib
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/baby-llama/CMakeLists.txt
+  baby-llama.cpp
+  baby-llama.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\baby-llama.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/batched/CMakeLists.txt
+  batched.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\batched\batched.cpp(73,86): warning C4267: 'initializing': conversion from 'size_
+t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\batched\batched.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\batched\batched.cpp(73,86): warning C4267: 'initializing': conversion from 'size_
+t' to 'const int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\batched\batched.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\batched\batched.cpp(115,96): warning C4267: 'argument': conversion from 'size_t'
+to 'int32_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\batched\batched.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\batched\batched.cpp(119,63): warning C4267: 'argument': conversion from 'size_t'
+to 'llama_pos', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\batched\batched.vcxproj]
+  batched.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\batched.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/batched-bench/CMakeLists.txt
+  batched-bench.cpp
+  batched-bench.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\batched-bench.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/beam-search/CMakeLists.txt
+  beam-search.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\beam-search\beam-search.cpp(163): warning C4267: 'argument': conversion from 'siz
+e_t' to 'int32_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\beam-search\beam-search.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\beam-search\beam-search.cpp(168,31): warning C4267: '+=': conversion from 'size_t
+' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\beam-search\beam-search.vcxproj]
+  beam-search.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\beam-search.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/benchmark/CMakeLists.txt
+  benchmark-matmult.cpp
+  benchmark.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\benchmark.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/convert-llama2c-to-ggml/CMakeLists.txt
+  convert-llama2c-to-ggml.cpp
+  convert-llama2c-to-ggml.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\convert-llama2c-to-ggml.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/embedding/CMakeLists.txt
+  embedding.cpp
+  embedding.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\embedding.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/export-lora/CMakeLists.txt
+  export-lora.cpp
+  export-lora.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\export-lora.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/finetune/CMakeLists.txt
+  finetune.cpp
+  finetune.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\finetune.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/CMakeLists.txt
+  ggml_static.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\Release\ggml_static.lib
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/infill/CMakeLists.txt
+  infill.cpp
+  infill.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\infill.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/llama-bench/CMakeLists.txt
+  llama-bench.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llama-bench\llama-bench.cpp(79,13): warning C4244: 'initializing': conversion fro
+m 'double' to 'T', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llama-bench\llama-bench.vcxproj]
+          with
+          [
+              T=uint64_t
+          ]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llama-bench\llama-bench.cpp(619,1): message : see reference to function template
+instantiation 'T stdev<uint64_t>(const std::vector<uint64_t,std::allocator<uint64_t>> &)' being compiled [C:\00_iWorkspace\AI\Llam
+a.cpp\llama.cpp\build\examples\llama-bench\llama-bench.vcxproj]
+          with
+          [
+              T=uint64_t
+          ]
+  llama-bench.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\llama-bench.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/llava/CMakeLists.txt
+  llava-cli.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\llava\llava-cli.cpp(88,107): warning C4267: 'argument': conversion from 'size_t'
+to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\llava-cli.vcxproj]
+  llava-cli.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\llava-cli.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/llava/CMakeLists.txt
+  llava_static.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\llava\Release\llava_static.lib
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/lookahead/CMakeLists.txt
+  lookahead.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\lookahead\lookahead.cpp(91,35): warning C4267: 'initializing': conversion from 's
+ize_t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\lookahead\lookahead.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\lookahead\lookahead.cpp(91,35): warning C4267: 'initializing': conversion from 's
+ize_t' to 'const int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\lookahead\lookahead.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\lookahead\lookahead.cpp(108,28): warning C4267: 'initializing': conversion from '
+size_t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\lookahead\lookahead.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\lookahead\lookahead.cpp(365,132): warning C4267: 'argument': conversion from 'siz
+e_t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\lookahead\lookahead.vcxproj]
+  lookahead.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\lookahead.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/lookup/CMakeLists.txt
+  lookup.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\lookup\lookup.cpp(63,35): warning C4267: 'initializing': conversion from 'size_t'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\lookup\lookup.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\lookup\lookup.cpp(63,35): warning C4267: 'initializing': conversion from 'size_t'
+ to 'const int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\lookup\lookup.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\lookup\lookup.cpp(76,28): warning C4267: 'initializing': conversion from 'size_t'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\lookup\lookup.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\lookup\lookup.cpp(163,1): warning C4267: 'initializing': conversion from 'size_t'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\lookup\lookup.vcxproj]
+  lookup.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\lookup.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/main/CMakeLists.txt
+  main.cpp
+  main.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\main.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/parallel/CMakeLists.txt
+  parallel.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\parallel\parallel.cpp(159,22): warning C4267: '=': conversion from 'size_t' to 'i
+nt32_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\parallel\parallel.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\parallel\parallel.cpp(165,57): warning C4267: 'initializing': conversion from 'si
+ze_t' to 'int32_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\parallel\parallel.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\parallel\parallel.cpp(165,57): warning C4267: 'initializing': conversion from 'si
+ze_t' to 'const int32_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\parallel\parallel.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\parallel\parallel.cpp(257,107): warning C4267: 'argument': conversion from 'size_
+t' to 'llama_pos', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\parallel\parallel.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\parallel\parallel.cpp(265,60): warning C4267: '=': conversion from 'size_t' to 'i
+nt32_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\parallel\parallel.vcxproj]
+  parallel.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\parallel.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/passkey/CMakeLists.txt
+  passkey.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\passkey\passkey.cpp(45,20): warning C4244: '=': conversion from 'time_t' to 'int'
+, possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\passkey\passkey.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\passkey\passkey.cpp(113,82): warning C4267: 'initializing': conversion from 'size
+_t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\passkey\passkey.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\passkey\passkey.cpp(113,82): warning C4267: 'initializing': conversion from 'size
+_t' to 'const int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\passkey\passkey.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\passkey\passkey.cpp(115,48): warning C4267: 'initializing': conversion from 'size
+_t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\passkey\passkey.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\passkey\passkey.cpp(115,48): warning C4267: 'initializing': conversion from 'size
+_t' to 'const int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\passkey\passkey.vcxproj]
+  passkey.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\passkey.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/perplexity/CMakeLists.txt
+  perplexity.cpp
+  perplexity.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\perplexity.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/pocs/vdot/CMakeLists.txt
+  q8dot.cpp
+  q8dot.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\q8dot.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/quantize/CMakeLists.txt
+  quantize.cpp
+  quantize.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\quantize.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/quantize-stats/CMakeLists.txt
+  quantize-stats.cpp
+  quantize-stats.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\quantize-stats.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/save-load-state/CMakeLists.txt
+  save-load-state.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\save-load-state\save-load-state.cpp(42,82): warning C4267: 'argument': conversion
+ from 'size_t' to 'int32_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\save-load-state\save-lo
+ad-state.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\save-load-state\save-load-state.cpp(43,26): warning C4267: '+=': conversion from
+'size_t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\save-load-state\save-load-state.v
+cxproj]
+  save-load-state.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\save-load-state.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/server/CMakeLists.txt
+  server.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(91,39): warning C4267: 'initializing': conversion from 'size_t'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(105,69): warning C4267: '=': conversion from 'size_t' to 'uint8
+_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(129,65): warning C4267: '=': conversion from 'size_t' to 'uint8
+_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(866,1): warning C4267: '=': conversion from 'size_t' to 'int32_
+t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(909,67): warning C4101: 'e': unreferenced local variable [C:\00
+_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(965,1): warning C4267: 'argument': conversion from 'size_t' to
+'llama_pos', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(1528,1): warning C4267: 'initializing': conversion from 'size_t
+' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(1711,1): warning C4267: 'argument': conversion from 'size_t' to
+ 'llama_pos', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(1772,1): warning C4267: '=': conversion from 'size_t' to 'int32
+_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(1799,1): warning C4267: '=': conversion from 'size_t' to 'int32
+_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(1818,1): warning C4267: '=': conversion from 'size_t' to 'int32
+_t', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(1826,1): warning C4267: 'argument': conversion from 'size_t' to
+ 'llama_pos', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\server\server.cpp(1849,1): warning C4267: 'argument': conversion from 'size_t' to
+ 'llama_pos', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\server\server.vcxproj]
+  server.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\server.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/simple/CMakeLists.txt
+  simple.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\simple\simple.cpp(71,75): warning C4267: 'initializing': conversion from 'size_t'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\simple\simple.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\simple\simple.cpp(71,75): warning C4267: 'initializing': conversion from 'size_t'
+ to 'const int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\simple\simple.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\simple\simple.cpp(99,63): warning C4267: 'argument': conversion from 'size_t' to
+'llama_pos', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\simple\simple.vcxproj]
+  simple.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\simple.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/speculative/CMakeLists.txt
+  speculative.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\speculative\speculative.cpp(130,35): warning C4267: 'initializing': conversion fr
+om 'size_t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\speculative\speculative.vcxpro
+j]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\speculative\speculative.cpp(130,35): warning C4267: 'initializing': conversion fr
+om 'size_t' to 'const int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\speculative\speculative.
+vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\speculative\speculative.cpp(151,32): warning C4267: 'initializing': conversion fr
+om 'size_t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\speculative\speculative.vcxpro
+j]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\examples\speculative\speculative.cpp(152,32): warning C4267: 'initializing': conversion fr
+om 'size_t' to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\examples\speculative\speculative.vcxpro
+j]
+  speculative.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\speculative.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-backend-ops.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-backend-ops.cpp(59,83): warning C4267: 'argument': conversion from 'size_t' to
+'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-backend-ops.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-backend-ops.cpp(535,1): warning C4267: 'initializing': conversion from 'size_t'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-backend-ops.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-backend-ops.cpp(566,24): warning C4244: 'initializing': conversion from 'int64_
+t' to 'double', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-backend-ops.vcxproj]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-backend-ops.cpp(696,87): warning C4244: 'argument': conversion from 'const _Ty'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-backend-ops.vcxproj]
+          with
+          [
+              _Ty=int64_t
+          ]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-backend-ops.cpp(696,75): warning C4244: 'argument': conversion from 'const _Ty'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-backend-ops.vcxproj]
+          with
+          [
+              _Ty=int64_t
+          ]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-backend-ops.cpp(696,63): warning C4244: 'argument': conversion from 'const _Ty'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-backend-ops.vcxproj]
+          with
+          [
+              _Ty=int64_t
+          ]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-backend-ops.cpp(696,51): warning C4244: 'argument': conversion from 'const _Ty'
+ to 'int', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-backend-ops.vcxproj]
+          with
+          [
+              _Ty=int64_t
+          ]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-backend-ops.cpp(1222,35): warning C4244: '=': conversion from 'int' to '_Ty', p
+ossible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-backend-ops.vcxproj]
+          with
+          [
+              _Ty=float
+          ]
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-backend-ops.cpp(1404,82): warning C4244: 'argument': conversion from 'const int
+' to 'float', possible loss of data [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-backend-ops.vcxproj]
+  test-backend-ops.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-backend-ops.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-c.c
+  test-c.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-c.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-grad0.cpp
+  test-grad0.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-grad0.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-grammar-parser.cpp
+  test-grammar-parser.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-grammar-parser.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-llama-grammar.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\.\llama.cpp(2971,69): warning C4566: character represented by universal-character-name '\u
+010A' cannot be represented in the current code page (936) [C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\tests\test-llama-grammar
+.vcxproj]
+  test-llama-grammar.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-llama-grammar.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-quantize-fns.cpp
+  test-quantize-fns.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-quantize-fns.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-quantize-perf.cpp
+  test-quantize-perf.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-quantize-perf.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-rope.cpp
+  test-rope.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-rope.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-sampling.cpp
+  test-sampling.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-sampling.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-tokenizer-0-falcon.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-tokenizer-0-falcon.cpp(1,1): warning C4819: The file contains a character that
+cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss [C:\00_iWorkspace\AI\Ll
+ama.cpp\llama.cpp\build\tests\test-tokenizer-0-falcon.vcxproj]
+  test-tokenizer-0-falcon.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-tokenizer-0-falcon.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-tokenizer-0-llama.cpp
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\tests\test-tokenizer-0-llama.cpp(1,1): warning C4819: The file contains a character that c
+annot be represented in the current code page (936). Save the file in Unicode format to prevent data loss [C:\00_iWorkspace\AI\Lla
+ma.cpp\llama.cpp\build\tests\test-tokenizer-0-llama.vcxproj]
+  test-tokenizer-0-llama.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-tokenizer-0-llama.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-tokenizer-1-bpe.cpp
+  test-tokenizer-1-bpe.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-tokenizer-1-bpe.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/tests/CMakeLists.txt
+  test-tokenizer-1-llama.cpp
+  test-tokenizer-1-llama.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\test-tokenizer-1-llama.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/tokenize/CMakeLists.txt
+  tokenize.cpp
+  tokenize.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\tokenize.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/examples/train-text-from-scratch/CMakeLists.txt
+  train-text-from-scratch.cpp
+  train-text-from-scratch.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\train-text-from-scratch.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/pocs/vdot/CMakeLists.txt
+  vdot.cpp
+  vdot.vcxproj -> C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build\bin\Release\vdot.exe
+  Building Custom Rule C:/00_iWorkspace/AI/Llama.cpp/llama.cpp/CMakeLists.txt
+
+C:\00_iWorkspace\AI\Llama.cpp\llama.cpp\build>
